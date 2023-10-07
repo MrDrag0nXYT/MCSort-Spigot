@@ -1,0 +1,6 @@
+name: MCSort-Spigot
+version: '${project.version}'
+main: zxc.mrdrag0nxyt.MCSort_Spigot
+api-version: '1.16'
+load: STARTUP
+authors: [MrDrag0nXYT]
