@@ -4,3 +4,7 @@ main: zxc.mrdrag0nxyt.MCSort_Spigot
 api-version: '1.16'
 load: STARTUP
 authors: [MrDrag0nXYT]
+
+commands:
+  sort:
+    usage: /sort <тип сортировки> <числа для сортировки>
