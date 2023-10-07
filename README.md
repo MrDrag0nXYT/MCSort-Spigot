@@ -7,6 +7,9 @@
 - Автозаполнение для команд
 - Меню справки (конечно же для одной команды)
 
+[Меню спаравки](https://raw.githubusercontent.com/MrDrag0nXYT/MCSort-Spigot/master/allcmd.png)
+[Сортировка кучей](https://raw.githubusercontent.com/MrDrag0nXYT/MCSort-Spigot/master/heapsort.png)
+
 ### **Что планируется:**
 
 - Не поверите, ничего
