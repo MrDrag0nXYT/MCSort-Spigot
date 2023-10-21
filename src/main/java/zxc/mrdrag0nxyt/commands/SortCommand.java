@@ -3,6 +3,7 @@ package zxc.mrdrag0nxyt.commands;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import zxc.mrdrag0nxyt.enums.SortType;
 
 import java.util.Arrays;
 
@@ -16,14 +17,14 @@ public class SortCommand implements CommandExecutor {
             for (int i = 0; i < (strings.length - 1); i++) {
                 nums[i] = Integer.parseInt(strings[(i + 1)]);
             }
-        } catch (Exception exp){
+        } catch (Exception exp) {
             commandSender.sendMessage(" ");
             commandSender.sendMessage("Введённый вами набор данных не является набором чисел. Как прикажете это сортировать?");
             commandSender.sendMessage(" ");
             return false;
         }
 
-        switch (strings[0].toLowerCase()){
+        switch (strings[0].toLowerCase()) {
             case "help":
                 commandSender.sendMessage(" ");
                 commandSender.sendMessage("+=========+ MCSort - помощь +=========+");
@@ -37,15 +38,18 @@ public class SortCommand implements CommandExecutor {
         commandSender.sendMessage(" ");
         commandSender.sendMessage("Изначальный массив: " + Arrays.toString(nums));
 
-        switch (strings[0].toLowerCase()){
-            case "selection":
+        switch (SortType.valueOf(strings[0].toLowerCase())) {
+            case SELECTION:
                 selectionSort(nums);
                 break;
-            case "heap":
+            case HEAP:
                 heapSort(nums);
                 break;
-            case "shell":
+            case SHELL:
                 shellSort(nums);
+                break;
+            case SIMPLE:
+                simpleSort(nums);
                 break;
             default:
                 commandSender.sendMessage("Такого варианта в списке нет!");
@@ -56,9 +60,6 @@ public class SortCommand implements CommandExecutor {
 
         return true;
     }
-
-
-
 
 
     private static void selectionSort(int[] nums) {
@@ -146,7 +147,7 @@ public class SortCommand implements CommandExecutor {
         }
     }
 
-    private static void simpleSort(int[] nums){
+    private static void simpleSort(int[] nums) {
         Arrays.sort(nums);
     }
 }
