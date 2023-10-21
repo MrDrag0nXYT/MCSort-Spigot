@@ -145,5 +145,9 @@ public class SortCommand implements CommandExecutor {
             }
         }
     }
+
+    private static void simpleSort(int[] nums){
+        Arrays.sort(nums);
+    }
 }
 
